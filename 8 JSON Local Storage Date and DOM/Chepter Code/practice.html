@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice Set</title>
+    <style>
+      #my-btn{
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #clear-btn {
+        background-color: aquamarine;
+        height: 30px;
+        margin-top: 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .js-odd{
+          background-color: blueviolet;
+        }
+        .js-even{
+          background-color: cadetblue;
+        }
+    </style>
+  </head>
+  <body>
+    <h3 id="greating"></h3>
+
+    <button id="my-btn" onclick="btnPreaaed();"></button>
+    <br>
+    <button id="clear-btn" onclick="clearLocalStorage();">Clear</button>
+    <script>
+      
+      let btnscore = localStorage.getItem('btnscore') || 0;
+      function btnPreaaed() {
+        btnscore++;
+        localStorage.setItem('btnscore' , btnscore);
+        updateButton();
+      }
+      function updateButton(){
+        let button= document.querySelector('#my-btn');
+        button.innerText = btnscore;
+        if(btnscore % 2 === 0){
+          button.classList.remove('js-odd');
+          button.classList.add('js-even');
+        }else{
+          button.classList.remove('js-even');
+          button.classList.add('js-odd');
+        }
+      }
+      updateButton();
+      function clearLocalStorage(){
+        localStorage.removeItem("btnscore");
+        btnscore = 0;
+        updateButton();
+      }
+
+
+        function doGreeting(personName = "Dear") {
+          let date = new Date();
+          let hours = date.getHours();
+          let heading = document.querySelector("#greating"); // Fixed selector
+          if (hours >= 5 && hours < 12) {
+            heading.innerText = `Good morning ${personName}`;
+          } else if (hours >= 12 && hours < 18) {
+            heading.innerText = `Good afternoon ${personName}`;
+          } else {
+            heading.innerText = `Good night ${personName}`;
+          }
+        }
+        doGreeting("Naseer");
+    </script>
+  </body>
+</html>

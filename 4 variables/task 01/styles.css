@@ -1,0 +1,14 @@
+#click-me{
+    background-color: lightgreen;
+    border: none;
+    width: 120px;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+.button{
+    background-color:antiquewhite;
+    border: 2px solid black;
+    width: 130px;
+    border-radius: 10px;
+   padding: 5px 15px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Practice Exercise</title>
+</head>
+<body>
+  <script>
+    // let product ={
+    //   name: "Jens",
+    //   size: L,
+    //   price: 456,
+    //   noOfItems: 56,
+    // };
+
+    // let product ={
+    //   name: "Jens",
+    //   size: 'L',
+    //   price: 456,
+    //   noOfItems: 56,
+    // };
+
+    // let copyProduct = product;
+    // console.log(product);
+
+    // copyProduct.name = "shart";
+    // console.log(product);
+
+    // copyProduct.size = "M";
+    // console.log(product);
+ 
+    // copyProduct.price = 890;
+    // console.log(product);
+
+    // let product ={
+    //   name: "Jens",
+    //   size: 'L',
+    //   price: 456,
+    //   noOfItems: 56,
+    //   'delivery-time' : "With in 18 hours It will delevered to you",
+    // };
+
+    // console.log(product['delivery-time']);
+
+
+    // let work = {
+    //   message: 'Good Job',
+    //   status: 'Complete',
+    // }
+    // console.log(work)
+    // let {message,status} = work;
+    // console.log(message , status) ;
+    //  console.log(status);
+
+
+    let product1 ={
+      name: "Jens",
+      size: 'L',
+      price: 456,
+      noOfItems: 56,
+      'delivery-time' : "With in 18 hours It will delevered to you",
+    };
+    let product2 ={
+      name: "Jens",
+      size: 'L',
+      price: 456,
+      noOfItems: 56,
+      'delivery-time' : "With in 18 hours It will delevered to you",
+    };
+    let product3 ={
+      name: "Jens",
+      size: 'S',
+      price: 456,
+      noOfItems: 56,
+      'delivery-time' : "With in 18 hours It will delevered to you",
+    };
+
+    function isIdenticalProduct(product1 , product2){
+      if(typeof product1!== 'object' || typeof product2!== 'object'){
+        console.warn("the product is ont contain in object");
+        return false;
+      }
+
+      if (product1 == product2){
+        return true;
+      }
+       if (product1.name == product2.name &&
+       product1.size == product2.size &&
+       product1.price == product2.price &&
+       product1.noOfItems == product2.noOfItems  ){
+        return true;
+       }else{
+        return false
+       }   
+    }
+
+    console.log(isIdenticalProduct(product1 , ''));
+       console.log(isIdenticalProduct(product1 , product1));
+       console.log(isIdenticalProduct(product1 , product2));
+       console.log(isIdenticalProduct(product1 , product3));
+       console.log(isIdenticalProduct(product2 , product3));
+       console.log(isIdenticalProduct(product3 , product1));
+
+  </script>
+</body>
+</html>

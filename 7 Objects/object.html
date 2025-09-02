@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    // let product = {
+    //   Item_Nname : "Cartoon T-shart",
+    //   companyName : "Mangoo",
+    //   price : 8890,
+    //   'no_of_items' : 89,
+    // };
+    // console.log( product);
+    // console.log( product.Item_Nname);
+    // console.log( product.companyName);
+    // console.log( product.price);
+    // product.companyName = "Banana";
+    // console.log( product);
+
+    // console.log(product['no_of_items']);
+
+    // let propertyName = 'no_of_items';
+    // console.log(product[propertyName]);
+
+    // ADD and DELETE
+
+    // product.discount = 'Buy 2 get 1 Free';
+    // console.log( product);
+
+    // delete product.discount;
+    // console.log( product);
+
+
+    //  let product = {
+    //   Item_Nname : "Cartoon T-shart",
+    //   companyName : "Mangoo",
+    //   price : 8890,
+    //   'no_of_items' : 89,
+    //   rating : {
+    //     stars : 4.7,
+    //     no_of_reviews: 89
+    //   },
+
+    //   displayPrice : function(){
+    //     console.log(`The price of ${this.Item_Nname} is Rs: ${this.price}`);
+    //   }
+    // };
+    // console.log(product.rating.stars);
+    // product.displayPrice();
+
+    // autoboxing
+    // console.log("Khan is a MC boy".length);
+    // console.log("Khan is a MC boy".toUpperCase());
+    // console.log("Khan is a MC boy".toLowerCase());
+    // console.log("Khan is a MC boy".replace('MC', 'Mother Chod'));
+
+
+    // object references
+
+    let a = 5;
+    let b = a;
+    console.log(`a = ${a} b = ${b}`);
+    a = 8;
+    console.log(`a = ${a} b = ${b}`);
+
+    let x = {val :20,};
+    let y = x;
+    console.log(`x = ${x.val} , y = ${y.val} `);
+    y.val = 89;
+    console.log(`x = ${x.val} , y = ${y.val} `);
+
+    console.log(x == y);
+
+    let p ={pop:'kjha'};
+    let q ={pop:'kjha'};
+
+    console.log(p == q);
+    console.log(p === q);
+
+  </script>
+</body>
+</html>
